@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layouting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+        <div class="container">
+            <h1>CSS <span class="highlight">Layouting</span></h1>
+            <p>Belajar menyusun elemen halaman web.</p>
+        </div>
+    </header>
+
+    <!-- ===== NAVIGASI ===== -->
+    <nav class="site-nav container">
+        <a href="#beranda">Beranda</a>
+        <a href="#artikel">Artikel</a>
+        <a href="#sidebar">Sidebar</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+
+    <main class="container" id="beranda">
+
+        <!-- ===== INTRO ===== -->
+        <section class="intro">
+            <h2>Selamat Datang</h2>
+            <p>
+                CSS Layouting mengatur posisi, ukuran, dan
+                susunan elemen HTML pada halaman web.
+            </p>
+            <!-- Praktik 1 (4.1): span -->
+            <p>
+                Saya sedang belajar
+                <span class="highlight">CSS Layouting</span>.
+            </p>
+        </section>
+
+        <!-- ================================================= -->
+        <!--          AREA PRAKTIK (DEMO TIAP MATERI)           -->
+        <!-- ================================================= -->
+        <section class="lab">
+            <h2 class="lab-title">Area Praktik</h2>
+
+            <!-- ===== PRAKTIK 1: DISPLAY ===== -->
+            <h3 class="lab-sub">Praktik 1 — Display</h3>
+
+            <!-- 4.2 Block, Inline, Inline-Block -->
+            <section class="display-demo">
+                <h2>Display (inline — default span)</h2>
+                <span class="demo-item">Item Satu</span>
+                <span class="demo-item">Item Dua</span>
+                <span class="demo-item">Item Tiga</span>
+            </section>
+
+            <section class="display-demo">
+                <h2>Display: block</h2>
+                <span class="demo-item as-block">Item Satu</span>
+                <span class="demo-item as-block">Item Dua</span>
+                <span class="demo-item as-block">Item Tiga</span>
+            </section>
+
+            <section class="display-demo">
+                <h2>Display: inline-block (width 150px, height 70px)</h2>
+                <span class="demo-item as-inline-block">Item Satu</span>
+                <span class="demo-item as-inline-block">Item Dua</span>
+                <span class="demo-item as-inline-block">Item Tiga</span>
+            </section>
+
+            <!-- 4.3 Display none vs visibility hidden -->
+            <section class="display-demo">
+                <h2>display: none vs visibility: hidden</h2>
+                <p>Paragraf SEBELUM.</p>
+                <p class="pesan-none">Pesan ini disembunyikan (display: none) — ruangnya hilang.</p>
+                <p>Paragraf di antara (perhatikan tidak ada celah di atas).</p>
+                <p class="pesan-hidden">Pesan ini disembunyikan (visibility: hidden) — ruangnya tetap ada.</p>
+                <p>Paragraf SESUDAH (perhatikan ada celah kosong di atasnya).</p>
+            </section>
+
+            <!-- ===== PRAKTIK 2: DIMENSI & OVERFLOW ===== -->
+            <h3 class="lab-sub">Praktik 2 — Dimensi dan Overflow</h3>
+
+            <!-- 5.1 -->
+            <div class="dimension-demo">
+                Contoh pengaturan dimensi elemen.
+            </div>
+
+            <!-- 5.2 -->
+            <div class="parent-width">
+                <div class="child-width">Lebar 50%</div>
+            </div>
+
+            <div class="parent-width">
+                <div class="child-minmax">Lebar 100% dengan min-width 250px &amp; max-width 500px</div>
+            </div>
+
+            <!-- 5.3 Overflow -->
+            <div class="overflow-grid">
+                <div>
+                    <p class="label">overflow: visible</p>
+                    <div class="overflow-demo ov-visible">
+                        Konten ini sengaja dibuat panjang agar melampaui
+                        area kotak. Tambahkan teks hingga konten melebihi
+                        tinggi yang sudah ditentukan. Konten ini sengaja
+                        dibuat panjang agar melampaui area kotak.
+                    </div>
+                </div>
+                <div>
+                    <p class="label">overflow: hidden</p>
+                    <div class="overflow-demo ov-hidden">
+                        Konten ini sengaja dibuat panjang agar melampaui
+                        area kotak. Tambahkan teks hingga konten melebihi
+                        tinggi yang sudah ditentukan. Konten ini sengaja
+                        dibuat panjang agar melampaui area kotak.
+                    </div>
+                </div>
+                <div>
+                    <p class="label">overflow: scroll</p>
+                    <div class="overflow-demo ov-scroll">
+                        Konten ini sengaja dibuat panjang agar melampaui
+                        area kotak. Tambahkan teks hingga konten melebihi
+                        tinggi yang sudah ditentukan. Konten ini sengaja
+                        dibuat panjang agar melampaui area kotak.
+                    </div>
+                </div>
+                <div>
+                    <p class="label">overflow: auto</p>
+                    <div class="overflow-demo ov-auto">
+                        Konten ini sengaja dibuat panjang agar melampaui
+                        area kotak. Tambahkan teks hingga konten melebihi
+                        tinggi yang sudah ditentukan. Konten ini sengaja
+                        dibuat panjang agar melampaui area kotak.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== PRAKTIK 3: BOX MODEL ===== -->
+            <h3 class="lab-sub">Praktik 3 — Box Model dan CSS Reset</h3>
+
+            <!-- 6.1 -->
+            <div class="box-grid">
+                <div>
+                    <p class="label">content-box → 200 + 20 + 20 + 5 + 5 = 250px</p>
+                    <div class="box-model-demo box-content">Contoh Box Model (content-box)</div>
+                </div>
+                <div>
+                    <p class="label">border-box → total tetap 200px</p>
+                    <div class="box-model-demo box-border">Contoh Box Model (border-box)</div>
+                </div>
+            </div>
+
+            <!-- 6.2 Margin shorthand -->
+            <div class="margin-shorthand">
+                <div class="ms ms-1">margin: 10px</div>
+                <div class="ms ms-2">margin: 10px 20px</div>
+                <div class="ms ms-3">margin: 10px 20px 30px</div>
+                <div class="ms ms-4">margin: 10px 20px 30px 40px</div>
+            </div>
+
+            <!-- 6.4 Margin collapse -->
+            <p class="label">Margin collapse (jarak antara A dan B = 30px, bukan 50px)</p>
+            <div class="margin-a">Kotak A (margin-bottom 20px)</div>
+            <div class="margin-b">Kotak B (margin-top 30px)</div>
+
+            <!-- ===== PRAKTIK 5: FLOAT & CLEAR ===== -->
+            <h3 class="lab-sub">Praktik 5 — Float dan Clear</h3>
+
+            <!-- 8.1 -->
+            <div class="float-demo cf">
+                <div class="float-box">Float</div>
+                <p>
+                    Teks ini mengalir di sekitar elemen yang
+                    menggunakan float. Ubah float: left menjadi
+                    float: right atau float: none untuk melihat
+                    perbedaannya pada aliran teks.
+                </p>
+            </div>
+
+            <!-- 8.2 Container collapse (tanpa penanganan) -->
+            <p class="label">8.2 Container collapse — parent tidak membungkus anak float</p>
+            <div class="float-parent">
+                <div class="float-child">Anak A</div>
+                <div class="float-child">Anak B</div>
+            </div>
+            <div class="after-float">(Elemen setelah parent — perhatikan tumpang tindih)</div>
+
+            <!-- 8.3 Clear dengan elemen kosong -->
+            <p class="label">8.3 Solusi: elemen kosong dengan clear: both</p>
+            <div class="float-parent">
+                <div class="float-child">Anak A</div>
+                <div class="float-child">Anak B</div>
+                <div class="clear"></div>
+            </div>
+
+            <!-- 8.4 Overflow auto -->
+            <p class="label">8.4 Solusi: overflow: auto pada parent</p>
+            <div class="float-parent fp-overflow">
+                <div class="float-child">Anak A</div>
+                <div class="float-child">Anak B</div>
+            </div>
+
+            <!-- 8.5 Clearfix -->
+            <p class="label">8.5 Solusi: clearfix (class cf)</p>
+            <div class="float-parent cf">
+                <div class="float-child">Anak A</div>
+                <div class="float-child">Anak B</div>
+            </div>
+
+            <!-- ===== PRAKTIK 7: STATIC & RELATIVE ===== -->
+            <h3 class="lab-sub">Praktik 7 — Position Static dan Relative</h3>
+            <div class="position-demo static-box">Static</div>
+            <div class="position-demo relative-box">Relative</div>
+            <div class="position-demo relative-neg">Relative (nilai negatif)</div>
+
+            <!-- ===== PRAKTIK 8: ABSOLUTE ===== -->
+            <h3 class="lab-sub">Praktik 8 — Position Absolute dan Fixed</h3>
+            <div class="absolute-container">
+                <p>Konten container.</p>
+                <span class="absolute-label">PROMO</span>
+            </div>
+            <p class="label">Tombol hijau "Kembali ke Atas" di pojok kanan bawah menggunakan position: fixed.</p>
+
+            <!-- ===== PRAKTIK 9: Z-INDEX & CENTERING ===== -->
+            <h3 class="lab-sub">Praktik 9 — Z-Index dan Centering</h3>
+            <div class="stack-container">
+                <div class="stack-box stack-blue">Biru</div>
+                <div class="stack-box stack-red">Merah</div>
+                <div class="stack-box stack-green">Hijau</div>
+            </div>
+
+            <div class="center-demo">
+                <div class="center-box">Tengah</div>
+            </div>
+        </section>
+
+        <!-- ================================================= -->
+        <!--   PRAKTIK 4 & 6: WEBSITE UTAMA — LAYOUT DUA KOLOM   -->
+        <!-- ================================================= -->
+        <div class="layout-container cf">
+            <section class="main-content" id="artikel">
+
+                <article class="article-card">
+                    <h2>Memahami CSS Layouting</h2>
+                    <p>
+                        Layouting membantu menyusun elemen
+                        halaman agar lebih teratur.
+                    </p>
+                    <p>
+                        CSS mengendalikan ukuran, jarak,
+                        dan posisi elemen.
+                    </p>
+                </article>
+
+                <article class="article-card">
+                    <h2>Memahami Box Model</h2>
+                    <p>
+                        Box Model menjelaskan content,
+                        padding, border, dan margin.
+                    </p>
+                </article>
+
+                <section class="image-section">
+                    <h2>Positioning dan Overlay</h2>
+                    <div class="hero-image">
+                        <img src="images/banner.jpg"
+                             alt="Ilustrasi teknologi">
+                        <div class="image-overlay"></div>
+                        <div class="image-caption">
+                            <h3>Belajar Web Development</h3>
+                            <p>Menyusun tampilan dengan CSS.</p>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+
+            <aside class="sidebar" id="sidebar">
+                <h2>Materi</h2>
+                <ul>
+                    <li>Display</li>
+                    <li>Dimensi</li>
+                    <li>Overflow</li>
+                    <li>Box Model</li>
+                    <li>Positioning</li>
+                </ul>
+                <div class="sidebar-box">
+                    <h3>Informasi</h3>
+                    <p>Praktikum CSS Layouting.</p>
+                </div>
+            </aside>
+        </div>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer" id="kontak">
+        <div class="container">
+            <p>&copy; 2026 CSS Layouting.</p>
+        </div>
+    </footer>
+
+    <!-- ===== TOMBOL FIXED ===== -->
+    <a class="floating-button" href="#beranda">
+        Kembali ke Atas
+    </a>
+
+</body>
+</html>
